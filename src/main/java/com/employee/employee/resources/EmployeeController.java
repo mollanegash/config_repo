@@ -5,12 +5,23 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Collections;
+import java.util.List;
+
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController {
-    @RequestMapping("/{id}")
-    public Employee getEmployees(@PathVariable("id") String id){
-        return new Employee("sam",123,1234.5);
-    }
+//    @RequestMapping("/{id}")
+//    public Employee getEmployees(@PathVariable("id") String id){
+//        return new Employee("sam",123,1234.5);
+//
+//    }
+@RequestMapping("/{empId}")
+public List<Employee> getAllEmployees(@PathVariable("empId") String empId){
+        return Collections.singletonList(
+                new Employee("sami",123,123)
+        );
 
+
+    }
 }
