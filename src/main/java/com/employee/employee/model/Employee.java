@@ -1,4 +1,4 @@
-package com.employee.employee.module;
+package com.employee.employee.model;
 
 public class Employee {
     private String name;
